@@ -1,0 +1,39 @@
+queue = []
+queue.append("1")
+queue.append("2")
+queue.append("3")
+queue.append("4")
+queue.append("5")
+queue.append("6")
+
+while True:
+    a = 0
+    print("Текущая очередь:\n", queue)
+    a = input("""Выберите действие:
+1. Поместить элемент х в конец очереди
+2. Удаляет элемент из начала очереди queue и присваивает его значение переменной x
+3. Вернуть значение FALSE если очередь является пустой, в ином случае вывесть TRUE
+4. Определение текущего числа элементов в очереди
+5. Очистка очереди\n""")
+    if a == "1":
+        x = input("Введите x ")
+        queue.append(x)
+
+    elif a == "2":
+        queue.pop(0)
+
+    elif a == "3":
+        a=queue.__len__()
+        if a == 0:
+            print("FALSE")
+        else:
+            print("TRUE")
+
+    elif a == "4":
+        print(queue.__len__())
+
+    elif a == "5":
+        queue.clear()
+
+    else:
+        print("Действие указанно неправильно")

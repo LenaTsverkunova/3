@@ -1,0 +1,49 @@
+import itertools
+from random import randint
+Mylist = []
+
+
+while True:
+    a = 0
+    a = input("""Выберите действие:
+1. Перебор элементов списка
+2. Операция формирования списка
+3. Вставка элемента в список
+4. Удаление элемента
+5. Перестановка элементов списка
+6. Печать односвязного списка\n""")
+
+    if a == "1":
+       pass
+
+    elif a == "2":
+        n = int(input("Введите размер списка"))
+        for i in range(n):
+            Mylist.append(randint(1, 10))
+        # list = [randint(1, 10) for i in range(n)]
+
+    elif a == "3":
+        y = input("Элемент который надо вставить: ")
+        Mylist.append(y)
+        print("Текущая список:", Mylist)
+
+    elif a == "4":
+        c = input("Элемент который надо удалить: ")
+        #Mylist.pop(0)
+        # for i in range(len(Mylist)):
+        #     if  Mylist[i] == c:
+        Mylist.remove(c)
+
+        print("Текущая список:", Mylist)
+    elif a == "5":
+        n=7
+        for i in itertools.permutations(Mylist, n):
+            print(i)
+
+
+    elif a == "6":
+            print("Текущая список:", Mylist)
+
+    else:
+        print("Действие указанно неправильно")
+
